@@ -7,4 +7,3 @@ let tsurukame_no_ashi tsuru_num kame_num = tsuru_no_ashi tsuru_num + kame_no_ash
 let test1 = tsurukame_no_ashi 1 1 = 6
 let test2 = tsurukame_no_ashi 0 1 = 4
 let test3 = tsurukame_no_ashi 1 0 = 2
-
