@@ -1,4 +1,4 @@
-(* 2次方程式ax2 + bx + c =0の係数a,b,cを与えられたら判別式の値を返す *)
+(* 2次方程式の係数a,b,cを与えられたら判別式の値を返す *)
 (* hanbetsushiki : float -> float -> float -> float *)
 let hanbetsushiki a b c = b ** 2. -. 4. *. a *. c
 
