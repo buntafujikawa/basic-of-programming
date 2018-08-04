@@ -23,3 +23,12 @@ let rec even list = match list with
 let test1 = even [] = []
 let test2 = even [2; 1; 6; 4; 7] = [2; 6; 4]
 
+(* 文字列のリストを受け取ったら、その中の要素を前から順に全部くっつけた文字列を返す *)
+(* concat : string list -> string *)
+let rec concat list = match list with
+    [] -> ""
+    | first :: rest -> first ^ concat rest
+
+let test1 = concat [] = ""
+let test2 = concat ["春"; "夏"; "秋"; "冬"] = "春夏秋冬"
+
