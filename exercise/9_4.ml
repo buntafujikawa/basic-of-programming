@@ -12,3 +12,14 @@ let test1 = length [] = 0
 let test2 = length [1] = 1
 let test3 = length [1; 5; 6; 9; 3] = 5
 
+(* 整数のリストを受け取ったら、その中の偶数の要素のみを含むリストを返す *)
+(* even : int list -> int list *)
+let rec even list = match list with
+    [] -> []
+    | first :: rest ->
+        if first mod 2 = 0 then first :: (even rest)
+        else even rest
+
+let test1 = even [] = []
+let test2 = even [2; 1; 6; 4; 7] = [2; 6; 4]
+
