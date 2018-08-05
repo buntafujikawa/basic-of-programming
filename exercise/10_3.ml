@@ -1,4 +1,3 @@
-(* gakusei_t型のリストを受け取ったら、それをtensuuフィールドの順に整列したリストを返す *)
 type gakusei_t = {
     name : string;
     tensuu : int;
@@ -22,4 +21,14 @@ let test_list = [gakusei2; gakusei3]
 let test1 = insert_gakusei test_list gakusei1 = [gakusei1; gakusei2; gakusei3]
 let test2 = insert_gakusei test_list gakusei2 = [gakusei2; gakusei2; gakusei3]
 let test3 = insert_gakusei test_list gakusei4 = [gakusei2; gakusei3; gakusei4]
+
+(* gakusei_t型のリストを受け取ったら、それをtensuuフィールドの順に整列したリストを返す *)
+(* gakusei_sort : gakusei_t list -> gakusei_t list *)
+let rec gakusei_sort gakusei_list = match gakusei_list with
+    [] -> []
+    | first :: rest -> insert_gakusei (gakusei_sort rest) first
+
+let test1 = gakusei_sort [] = []
+let test2 = gakusei_sort [gakusei4; gakusei3; gakusei2] = [gakusei2; gakusei3; gakusei4]
+let test3 = gakusei_sort [gakusei2; gakusei1; gakusei3; gakusei2;] = [gakusei1; gakusei2; gakusei2; gakusei3]
 
