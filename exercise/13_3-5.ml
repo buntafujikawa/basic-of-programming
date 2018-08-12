@@ -13,6 +13,7 @@ let hoge4 fuga1 f = f fuga1
 (* ('a -> 'b) -> ('b -> 'c) -> 'a -> 'c *)
 let hoge2 f1 f2 x = f2 (f1 x)
 
+
 let add3 x = x + 3;;
 let times2 x = x * 2;;
 
@@ -21,3 +22,10 @@ let times2 x = x * 2;;
 let compose f1 f2 x = f1 (f2 x)
 
 let test1 = compose times2 add3 4 = 14
+
+
+let twice f =
+    let g x = f (f x)
+    in g
+
+let test1 = twice twice
