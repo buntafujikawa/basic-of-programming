@@ -19,4 +19,3 @@ let ins_sort lst = match lst with
 let test1 = ins_sort [] = []
 let test2 = ins_sort [1; 3; 2] = [1; 2; 3]
 let test3 = ins_sort [1; 1; -1] = [-1; 1; 1]
-
