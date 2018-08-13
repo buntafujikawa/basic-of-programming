@@ -11,6 +11,7 @@ type person_t = { name : string;  height : float; weight : float; month : int; d
 let person1 = { name = "鈴木";  height = 170.0; weight = 64.5; month = 1; day = 2; blood_type = "A" }
 let person2 = { name = "田中";  height = 180.0; weight = 74.9; month = 2; day = 3; blood_type = "B" }
 let person3 = { name = "佐藤";  height = 190.0; weight = 100.0; month = 3; day = 4; blood_type = "AB" }
+let person4 = { name = "山田";  height = 200.0; weight = 110.0; month = 4; day = 5; blood_type = "A" }
 
 (* person_t型のデータを受け取ったら「〇〇さんの血液型は△型です」」という形の文字列を返す *)
 (* person_t -> string *)
