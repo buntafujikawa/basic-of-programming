@@ -23,3 +23,9 @@ let one_to_n n = List.fold_right (+) (enumerate n) 0
 let test1 = one_to_n 1 = 1
 let test2 = one_to_n 5 = 15
 
+(* 階乗を求める *)
+(* fac : int -> int *)
+let fac n = List.fold_right ( * ) (enumerate n) 1
+
+let test1 = fac 1 = 1
+let test2 = fac 5 = 120
