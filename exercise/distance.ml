@@ -1,4 +1,3 @@
-(*  *)
 (* 距離と距離の合計を持っている型 *)
 type distance_t = {
     kyori : float;
