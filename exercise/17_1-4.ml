@@ -19,3 +19,31 @@ let nenrei birth_year this_year =
 
 let test1 = nenrei (Heisei (6)) (Heisei (30)) = 24
 let test2 = nenrei (Showa (30)) (Heisei (30)) = 63
+
+(* 1月から12がつを表す *)
+type year_t = January of int
+            | February of int
+            | March of int
+            | April of int
+            | May of int
+            | June of int
+            | July of int
+            | August of int
+            | September of int
+            | October of int
+            | November of int
+            | December of int
+
+(* 12星座を表す *)
+type seiza_t = Capricorn
+               | Aquarius
+               | Pisces
+               | Aries
+               | Taurus
+               | Gemini
+               | Cancer
+               | Leo
+               | Virgo
+               | Libra
+               | Scorpio
+               | Sagittarius
