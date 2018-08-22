@@ -43,3 +43,15 @@ let test1 = tree_map f tree1 = Empty
 let test2 = tree_map f tree2 = Leaf (6)
 let test3 = tree_map f tree3 = Node (Empty, 8, (Leaf (6)))
 let test4 = tree_map f tree4 = Node (Leaf (6), 10, Node (Empty, 8, Leaf (6)))
+
+(* tree_t型の木を受け取ったら、節と葉が合計いくつあるかを返す *)
+(* tree_length : tree_t -> int *)
+let rec tree_length tree = match tree with
+     Empty -> 0
+   | Leaf (n) -> 1
+   | Node (t1, n, t2) -> tree_length t1 + 1 + tree_length t2
+
+let test1 = tree_length tree1 = 0
+let test2 = tree_length tree2 = 1
+let test3 = tree_length tree3 = 2
+let test4 = tree_length tree4 = 4
