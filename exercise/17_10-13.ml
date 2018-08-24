@@ -46,7 +46,7 @@ let test2 = tree2 =
 
 (* リストの中に含まれる駅間を全て挿入した木を返す *)
 (* inserts_ekikan : ekikan_tree_t -> ekikan_t list -> ekikan_t list *)
-let rec inserts_ekikan ekikan_tree ekikan_list =
+let inserts_ekikan ekikan_tree ekikan_list =
     List.fold_left insert_ekikan ekikan_tree ekikan_list
 
 let test1 = inserts_ekikan Empty [ekikan1; ekikan2; ekikan3] =
